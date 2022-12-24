@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="preload" href="%sveltekit.assets%/fonts/Inter.woff2" as="font" type="font/woff2"
+		crossOrigin="anonymous" />
+	<title>Jessy.co</title>
+
+	<script>
+		/**
+		 * A IIFE to set the theme mode for the website.
+		 * Helps prevent flickering effect when using dark themes and refreshing.
+		 **/
+		(function themeSetter() {
+
+			const key = 'theme_mode';
+			let currentThemeMode = window?.localStorage?.getItem(key);
+			let isThemeModeLight = currentThemeMode === 'light';
+			let isThemeModeDark = currentThemeMode === 'dark';
+			let hasThemeMode = (isThemeModeDark || isThemeModeLight);
+
+			if (!hasThemeMode) {
+				currentThemeMode = 'dark';
+				window?.localStorage?.setItem(key, currentThemeMode);
+			}
+
+			document?.getElementsByTagName('html')[0].classList.add(currentThemeMode)
+			document?.body?.classList?.add(currentThemeMode);
+
+		})();
+	</script>
+	%sveltekit.head%
+</head>
+
+<body class='transition-colors dark:bg-gray-900 dark:text-gray-200' data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
+</html>
