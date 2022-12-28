@@ -1,8 +1,6 @@
 @tailwind base;
 
 @layer base {
-	@import 'prismjs/themes/prism-okaidia.css';
-
 	@font-face {
 		font-family: 'Inter';
 		src: url('/fonts/Inter.woff2') format('woff2');
@@ -17,43 +15,21 @@
 		height: 100%;
 	}
 
-	h1 {
-		@apply text-2xl;
-	}
-
-	h2 {
-		@apply text-xl;
-	}
-
-	h3 {
-		@apply text-lg;
-	}
-
-	p {
-		@apply pb-2;
-	}
-
-	a {
+	main a {
 		@apply transition-colors;
 		@apply text-blue-500 font-bold;
 		@apply hover:text-blue-700;
 
 		@apply dark:text-blue-400;
 		@apply hover:dark:text-yellow-200;
-	}
 
-	code {
-		@apply transition-colors;
-		@apply text-blue-500 font-bold;
-		@apply hover:text-blue-700;
-
-		@apply dark:text-blue-400;
-		@apply hover:dark:text-yellow-200;
+		&.active {
+			@apply dark:text-gray-500 text-white;
+		}
 	}
 }
+
 @tailwind components;
 @tailwind utilities;
 
-/* // @import "prismjs/themes/prism-dark.css";
-// @import "prismjs/themes/prism-coy.css";
-// @import "prismjs/themes/prism.css"; */
+@import 'prismjs/themes/prism-okaidia.css';

@@ -1,19 +1,26 @@
-<script>
-	import DarkModeButton from '$lib/components/DarkModeButton.svelte';
+<script lang="ts">
+	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte';
+	import { navItems } from '$lib/config';
+	import NavItem from './NavItem.svelte';
 </script>
 
-<div class="container mx-auto px-5">
-	<div class="flex items-center content-between">
-		<nav class="rounded-md w-full my-10">
-			<ol class="list-reset flex">
-				<li class="dark:bg-gray-50 dark:text-gray-900 bg-gray-900 text-gray-50 font-bold px-2 rounded">Index</li>
-				<!-- <li><span class="text-gray-500 mx-2">/</span></li>
-          <li class="dark:bg-gray-50 dark:text-gray-900 bg-gray-900 text-gray-50 font-bold px-2 rounded">
-              You're Here Link
-          </li> -->
+<div class="container mx-auto my-16">
+	<div class="flex items-center content-between font-mono">
+		<a href="/" class="dark:text-gray-50 text-gray-800 text-3xl group"
+			>Jessy<span class="group-hover:opacity-0 opacity-20 transition-opacity duration-500">.</span>Co<span
+				class="group-hover:opacity-100 opacity-20 transition-opacity duration-500">rmier</span
+			></a>
+		<nav class="grow">
+			<ol class="list-reset flex justify-end items-center gap-1">
+				{#each navItems as page}
+					<NavItem href={page.route} external={page.external}>
+						{page.title}
+					</NavItem>
+				{/each}
+				<li>
+					<DarkModeToggle />
+				</li>
 			</ol>
 		</nav>
-
-		<DarkModeButton />
 	</div>
 </div>
