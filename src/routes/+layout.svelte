@@ -29,7 +29,9 @@
 
 <SkipToMainContent />
 
-<Header />
+<Container>
+	<Header />
+</Container>
 
 {#key data.path}
 	<main id="main" tabindex="-1" style="outline:transparent" in:fade={transitionIn} out:fade={transitionOut}>

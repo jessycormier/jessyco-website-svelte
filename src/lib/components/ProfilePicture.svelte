@@ -3,7 +3,7 @@
 	import ImageHover from './ImageHover.svelte';
 </script>
 
-<ImageHover title="Jessy Cormier" text="👋 hello! thanks for visiting">
+<ImageHover title="Jessy Cormier" text="👋 hello! thanks for visiting" rounded={true}>
 	<img
 		alt="Profile Pic of Jessy Cormier"
 		class="profile-picture object-cover w-full aspect-square motion-safe:group-hover:scale-110 transition duration-300 ease-in-out"
