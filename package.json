@@ -15,6 +15,7 @@
     "@sveltejs/kit": "^1.0.0",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
+    "@types/trianglify": "^1.2.1",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "autoprefixer": "^10.4.13",
@@ -34,6 +35,7 @@
   },
   "type": "module",
   "dependencies": {
+    "trianglify": "^4.1.1",
     "dayjs": "^1.11.7"
   }
 }

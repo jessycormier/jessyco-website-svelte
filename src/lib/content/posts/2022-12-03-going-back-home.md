@@ -1,10 +1,10 @@
 ---
-date: 2022-12-03
+date: 2022-12-03T04:00:00.000Z
 title: Going back home
 slug: going-back-home
 excerpt: Well it's about that time again where I find that I'm looking for a new challenge.
 categories:
-  - post
+  - blog-post
 ---
 
 Well it's about that time again where I find that I'm looking for a new challenge. There's a thought out there that you shouldn't be switching your tools over and over again because that becomes the bulk of your work rather than focusing on what you're intent is which is output of some kind. I think I'm falling for that again here BUT it counts as practice which is always healthy. As of right now I'll be starting to port over my website from its base framework to a new one. I toyed around with the idea of using NextJS (current at the time of writing) or Svelte however those frameworks but I keep getting a calling back to where I went form writing websites with jQuery to learning modern development. That was Angular for me.

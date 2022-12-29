@@ -1,13 +1,16 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
+	import ImageHover from '$lib/components/ImageHover.svelte';
 	import { siteTitle } from '$lib/config';
 	import dayjs from 'dayjs';
 	import relativeTime from 'dayjs/plugin/relativeTime';
+	import timezone from 'dayjs/plugin/timezone';
 	dayjs.extend(relativeTime);
-
+	dayjs.extend(timezone);
+	dayjs.tz.setDefault('Atlantic Standard Time');
 	export let data: any;
 
-	const { title, excerpt, date, updated, categories, author = 'Jessy Cormier' } = data.meta;
+	const { title, excerpt, date, updated, slug, categories, author = 'Jessy Cormier' } = data.meta;
 </script>
 
 <svelte:head>
@@ -19,7 +22,12 @@
 	<meta property="og:description" content={excerpt} />
 	<meta name="twitter:description" content={excerpt} />
 </svelte:head>
-
+<ImageHover showDetails={false}>
+	<img
+		src="/api/polybg.svg?w=1200&h=600&s={slug}"
+		alt=""
+		class="h-64 object-cover w-full aspect-square motion-safe:group-hover:scale-110 transition duration-300 ease-in-out" />
+</ImageHover>
 <Container>
 	<article class="prose prose-stone max-w-none dark:prose-invert lg:prose-xl m-auto mt-24">
 		<h1 class="">{title}</h1>
@@ -32,22 +40,23 @@
 			{/if}
 			{#if date}
 				<span class="text-gray-700 dark:text-gray-300">{dayjs(date).fromNow()}</span>
+				<small>{dayjs(date).toString()}</small>
 			{/if}
 		</div>
 
 		{@html data.PostContent}
 	</article>
-	
+
 	<hr class="my-8" />
 
-	{#if !updated}
+	{#if updated}
 		Last Updated: <strong>{dayjs(updated).fromNow()}</strong>
 	{/if}
 	{#if categories}
-	<div class="mt-4">
-		<strong>Tags</strong>
-	</div>	
-	
+		<div class="mt-4">
+			<strong>Tags</strong>
+		</div>
+
 		<aside class="flex mb-6 space-x-2">
 			{#each categories as category}
 				<a href="/blog/category/{category}/">

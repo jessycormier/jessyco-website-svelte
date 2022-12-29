@@ -19,7 +19,6 @@
 			<div class="mr-8 hidden md:block">
 				<ProfilePicture />
 			</div>
-
 			<div class="flex flex-col justify-center text-center md:text-left">
 				<p class="text-4xl mb-8">
 					Hello!, I'm Jessy <span class="inline-block motion-safe:animate-bounce h-5">👋</span>

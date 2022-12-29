@@ -1,7 +1,6 @@
-// IMPORTANT: update all these property values in src/lib/config.js
 import { siteDescription, siteLink, siteTitle, siteURL } from '$lib/config';
 import type { RequestHandler } from './$types';
-export const prerender = true;
+// export const prerender = true;
 
 export const GET = (async () => {
 	const data = await Promise.all(
