@@ -14,6 +14,17 @@ if (
 
 
 export const GET = (({ url }) => {
+
+	if (
+		process.env.LD_LIBRARY_PATH == null ||
+		!process.env.LD_LIBRARY_PATH.includes(`${process.env.PWD}/node_modules/canvas/build/Release:`)
+	) {
+		process.env.LD_LIBRARY_PATH = `${process.env.PWD}/node_modules/canvas/build/Release:${
+			process.env.LD_LIBRARY_PATH || ''
+		}`;
+	}
+
+	
 	const seed = url.searchParams.get('s');
 	const width = Number(url.searchParams.get('w') ?? 80);
 	const height = Number(url.searchParams.get('h') ?? 80);
