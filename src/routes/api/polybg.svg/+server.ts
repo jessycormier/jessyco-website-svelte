@@ -1,7 +1,7 @@
 import Trianglify from 'trianglify';
 import type { RequestHandler } from './$types';
 
-export const prerender = true;
+// export const prerender = true;
 
 export const GET = (({ url }) => {
 	const seed = url.searchParams.get('s');

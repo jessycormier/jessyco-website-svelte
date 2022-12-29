@@ -2,7 +2,7 @@ import fetchPosts from '$lib/fetchPosts';
 import { postsPerPage } from '$lib/config';
 import { json } from '@sveltejs/kit';
 
-export const prerender = true;
+// export const prerender = true;
 
 export const GET = async ({ params }: any) => {
 	const { page } = params || 1;
