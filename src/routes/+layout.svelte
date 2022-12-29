@@ -12,7 +12,7 @@
 	import Container from '$lib/components/Container.svelte';
 
 	export let data: any;
-	export const prerender = true;
+	// export const prerender = true;
 
 	const animationDurationBase = 250;
 	const transitionIn = { delay: 150, duration: animationDurationBase };

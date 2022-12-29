@@ -10,7 +10,6 @@ const config = {
       },
     },
     colors: {
-      ...colors,
       transparent: "transparent",
       current: "currentColor",
       gray: {
@@ -25,6 +24,14 @@ const config = {
         800: "#202322",
         900: "#191a1a"
       },
+      blue: colors.blue,
+      amber: colors.amber,
+      green: colors.gray,
+      slate: colors.slate,
+      red: colors.red,
+      yellow: colors.yellow,
+      white: colors.white,
+      black: colors.black
     }
   },
   plugins: [
