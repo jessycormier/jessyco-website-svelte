@@ -1,13 +1,14 @@
 import { siteDescription, siteLink, siteTitle, siteURL } from '$lib/config';
 import type { RequestHandler } from './$types';
-// export const prerender = true;
+
+export const prerender = true;
 
 export const GET = (async () => {
 	const data = await Promise.all(
 		Object.entries(import.meta.glob('$lib/content/posts/*.md')).map(async ([path, page]) => {
 			const { metadata } = (await page()) as any;
-			const slug = path?.split('/')?.pop()?.split('.').shift();
-			return { ...metadata, slug };
+			// const slug = path?.split('/')?.pop()?.split('.').shift();
+			return { ...metadata, };
 		})
 	).then((posts) => {
 		return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

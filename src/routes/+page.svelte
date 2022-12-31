@@ -28,7 +28,7 @@
 					<TextHighlight>Senior Front-End Developer</TextHighlight>
 					based in Canada with a passion for
 					<TextHighlight>web development</TextHighlight> and
-					<TextHighlight>user expereince</TextHighlight>.
+					<TextHighlight>user experience</TextHighlight>.
 				</p>
 			</div>
 		</div>
@@ -39,6 +39,9 @@
 	<section class="my-12">
 		<h2 class="text-4xl mb-16">Recent Posts</h2>
 		<PostsList posts={data.posts} />
-		<Pagination currentPage={1} totalPosts={data.total} />
+		<p class="text-center pt-12">
+			<a href="/blog">See More</a>
+		</p>
+		<!-- <Pagination currentPage={1} totalPosts={data.total} /> -->
 	</section>
 </Container>

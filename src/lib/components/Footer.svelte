@@ -2,7 +2,7 @@
 	import { siteAuthor, socialLinks } from '$lib/config';
 </script>
 
-<footer class="py-4 sm:py-6 mt-48">
+<footer class="py-4 sm:py-6 mt-12">
 	<!-- <div class="md:flex md:justify-between">
 		<div class="mb-6 md:mb-0">
 			<a href="https://flowbite.com/" class="flex items-center">

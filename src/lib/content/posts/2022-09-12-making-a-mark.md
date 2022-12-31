@@ -1,7 +1,6 @@
 ---
 date: 2022-09-12T04:00:00.000Z
 title: Making A Mark
-slug: making-a-mark
 excerpt: This rebuild of my personal website is to give myself a digital garden for sharing knowledge and personal growth.
 categories:
   - blog-post

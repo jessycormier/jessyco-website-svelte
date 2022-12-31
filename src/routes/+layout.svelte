@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '$lib/styles/main.scss';
 
+	import { siteTitle, siteLink } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
 	import { currentPage } from '$lib/stores/store';
 	import Footer from '$lib/components/Footer.svelte';
@@ -12,7 +13,7 @@
 	import Container from '$lib/components/Container.svelte';
 
 	export let data: any;
-	// export const prerender = true;
+	export const prerender = true;
 
 	const animationDurationBase = 250;
 	const transitionIn = { delay: 150, duration: animationDurationBase };
@@ -25,8 +26,30 @@
 
 		preloadCode(...navRoutes);
 	});
+	const content =
+		"Hello!, I'm Jessy 👋 I'm a Senior Front-End Developer with a passion for web development and user experience.";
 </script>
 
+<svelte:head>
+	<!-- Primary Meta Tags -->
+	<title>Jessy.co</title>
+	<meta name="title" content={siteTitle} />
+	<meta name="description" {content} />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={siteLink} />
+	<meta property="og:title" content={siteTitle} />
+	<meta property="og:description" {content} />
+	<meta property="og:image" content="/social.svg" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={siteLink} />
+	<meta property="twitter:title" content={siteTitle} />
+	<meta property="twitter:description" {content} />
+	<meta property="twitter:image" content="/social.svg" />
+</svelte:head>
 <SkipToMainContent />
 
 <Container>
