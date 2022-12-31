@@ -1,5 +1,6 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
+import vercelAdapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 // import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -29,10 +30,11 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		// adapter: adapter(),
+		adapter: vercelAdapter(),
 		prerender: {
 			entries: [
-				// '*',
+				'*',
 				// '/api/posts/page/*',
 				// '/blog/category/*/page/',
 				// '/blog/category/*/page/*',

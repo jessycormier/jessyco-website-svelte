@@ -12,8 +12,11 @@
 </svelte:head>
 
 <Container>
-	<h1>Blog</h1>
+	<h1 class="text-4xl mb-12">Blog Posts</h1>
 
 	<PostsList posts={data.posts} />
-	<Pagination currentPage={1} totalPosts={data.total} />
+
+	
+		<Pagination currentPage={1} totalPosts={data.total} />
+	
 </Container>

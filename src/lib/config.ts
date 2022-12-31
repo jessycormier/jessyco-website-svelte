@@ -7,7 +7,7 @@ export const siteURL = 'jessy.co';
 export const siteLink = 'https://jessy.co';
 export const siteAuthor = 'Jessy Cormier';
 
-export const postsPerPage = 10;
+export const postsPerPage = 5;
 export const navItems: {
 	title: string;
 	route: string;

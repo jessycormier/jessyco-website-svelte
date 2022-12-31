@@ -1,7 +1,6 @@
 ---
 date: 2022-12-03T04:00:00.000Z
 title: Going back home
-slug: going-back-home
 excerpt: Well it's about that time again where I find that I'm looking for a new challenge.
 categories:
   - blog-post
