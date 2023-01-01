@@ -15,7 +15,7 @@ Learning Svelte and getting the context switching from SSR and client will be a 
 
 I've been able to make a neat thing where I can generate a low poly background like
 
-<img src="/api/polybg/80x80/jessy" />
+<img src="/api/polybg/80x80/jessy" alt="example of polybg api" />
 
 and control the size easily. This is what I'm using for these blog posts images for now to give the site a bit more life.
 

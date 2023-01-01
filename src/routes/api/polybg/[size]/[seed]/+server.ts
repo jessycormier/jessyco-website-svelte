@@ -3,6 +3,9 @@ import type { RequestHandler } from './$types';
 
 export const prerender = 'auto';
 
+/**
+ * @todo fix Trianglify definition as it's outdated.
+ */
 export const GET = (({ params }) => {
 	try {
 		const { seed, size } = params;
@@ -10,9 +13,7 @@ export const GET = (({ params }) => {
 		const width = Number(sizes[0]);
 		const height = Number(sizes[1]);
 
-		// casting as any to avoid issue with @type for the Trianglify lib.
-		// @todo: fix @typedef lib and PR
-
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const pattern = (Trianglify({ width, height, seed }) as any)
 			.toSVGTree({
 				scaling: 'auto'

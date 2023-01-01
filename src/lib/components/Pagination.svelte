@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { postsPerPage } from '$lib/config';
 
-	export let currentPage: any;
-	export let totalPosts: any;
+	export let currentPage: number;
+	export let totalPosts: number;
 	export let path = '/blog/page';
 
-	let pagesAvailable: any;
+	let pagesAvailable: number;
 	$: pagesAvailable = Math.ceil(totalPosts / postsPerPage);
 
-	const isCurrentPage = (page: any) => page == currentPage;
+	const isCurrentPage = (page: unknown) => page == currentPage;
 </script>
 
 <div class="flex justify-center my-12">

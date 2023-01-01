@@ -1,4 +1,6 @@
-export const load = async ({ url, fetch }: any) => {
+import type { PageServerLoad } from './$types';
+
+export const load = (async ({ url, fetch }) => {
 	const postRes = await fetch(`${url.origin}/api/posts.json`);
 	const posts = await postRes.json();
 
@@ -6,4 +8,4 @@ export const load = async ({ url, fetch }: any) => {
 	const total = await totalRes.json();
 
 	return { posts, total };
-};
+}) satisfies PageServerLoad;

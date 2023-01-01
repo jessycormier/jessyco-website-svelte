@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
-	import Pagination from '$lib/components/Pagination.svelte';
 	import PostsList from '$lib/components/PostsList.svelte';
 	import ProfilePicture from '$lib/components/ProfilePicture.svelte';
 	import TextHighlight from '$lib/components/TextHighlight.svelte';
 	import { siteTitle } from '$lib/config';
+	import type { PageData } from './$types';
 
-	export let data: any;
+	export let data: PageData;
 </script>
 
 <svelte:head>

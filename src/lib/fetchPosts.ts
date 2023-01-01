@@ -1,11 +1,12 @@
 import { postsPerPage } from '$lib/config';
+import type { PostMeta } from './interfaces/post-meta.interface';
 
-const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
-
-	const posts = await Promise.all(
+const fetchPostsMeta = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
+	const posts: PostMeta[] = await Promise.all(
 		Object.entries(import.meta.glob('/src/lib/content/posts/*.md')).map(async ([path, resolver]) => {
-			const { metadata } = (await resolver()) as any;
+			const { metadata } = (await resolver()) as { metadata: PostMeta };
 			const slug = path?.split('/')?.pop()?.slice(0, -3);
+
 			return { ...metadata, slug };
 		})
 	);
@@ -37,4 +38,4 @@ const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = 
 	};
 };
 
-export default fetchPosts;
+export default fetchPostsMeta;

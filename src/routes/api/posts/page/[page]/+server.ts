@@ -1,18 +1,19 @@
-import fetchPosts from '$lib/fetchPosts';
 import { postsPerPage } from '$lib/config';
+import fetchPostsMeta from '$lib/fetchPosts';
 import { json } from '@sveltejs/kit';
+import type { RequestHandler } from './$types';
 
 export const prerender = 'auto';
 
-export const GET = async ({ params }: any) => {
-	const { page } = params || 1;
+export const GET = (async ({ params }) => {
+	const page = Number(params.page) || 1;
 
 	const options = {
 		offset: (page - 1) * postsPerPage,
 		limit: postsPerPage
 	};
 
-	const { posts } = await fetchPosts(options);
+	const { posts: postsMeta } = await fetchPostsMeta(options);
 
-	return json(posts);
-};
+	return json(postsMeta);
+}) satisfies RequestHandler;

@@ -1,24 +1,20 @@
 import { postsPerPage } from '$lib/config';
-import fetchPosts from '$lib/fetchPosts';
-import { redirect } from '@sveltejs/kit';
+import fetchPostsMeta from '$lib/fetchPosts';
+import { redirectWhenNoPages } from '$lib/functions/redirect-when-no-pages.function';
+import type { PageServerLoad } from './$types';
 
-export const load = async ({ url, params, fetch }: any) => {
-	const page = parseInt(params.page) || 1;
-
-	// Keeps from duplicationg the blog index route as page 1
-	if (page <= 1) {
-		throw redirect(301, '/blog');
-	}
-
-	let offset = page * postsPerPage - postsPerPage;
+export const load = (async ({ url, params, fetch }) => {
+	const pageNumber = parseInt(params.page) || 1;
+	redirectWhenNoPages(pageNumber, '/blog');
+	const offset = pageNumber * postsPerPage - postsPerPage;
 
 	const totalPostsRes = await fetch(`${url.origin}/api/posts/count`);
 	const total = await totalPostsRes.json();
-	const { posts } = await fetchPosts({ offset, page } as any);
+	const { posts: postsMeta } = await fetchPostsMeta({ offset });
 
 	return {
-		posts,
-		page,
+		posts: postsMeta,
+		page: pageNumber,
 		totalPosts: total
 	};
-};
+}) satisfies PageServerLoad;

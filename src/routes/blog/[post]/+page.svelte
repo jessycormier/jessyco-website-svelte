@@ -3,17 +3,19 @@
 	import ImageHover from '$lib/components/ImageHover.svelte';
 	import Tag from '$lib/components/Tag.svelte';
 	import { siteTitle } from '$lib/config';
-	import { slugify } from '$lib/slugify.function';
+	import { slugify } from '$lib/functions/slugify.function';
 	import dayjs from 'dayjs';
 	import relativeTime from 'dayjs/plugin/relativeTime';
 	import timezone from 'dayjs/plugin/timezone';
+	import type { PageData } from './$types';
+
 	dayjs.extend(relativeTime);
 	dayjs.extend(timezone);
 	dayjs.tz.setDefault('Atlantic Standard Time');
-	export let data: any;
+
+	export let data: PageData;
 
 	const { title, excerpt, date, updated, categories, author = 'Jessy Cormier' } = data.meta;
-
 </script>
 
 <svelte:head>
@@ -28,10 +30,7 @@
 
 <a href="#top" on:click={() => history.back()}>
 	<ImageHover showDetails={true} title="Go Back">
-		<img
-			src="/api/polybg/1200x600/{slugify(title)}"
-			alt=""
-			class="h-72 object-cover w-full ease-in-out" />
+		<img src="/api/polybg/1200x600/{slugify(title)}" alt="" class="h-72 object-cover w-full ease-in-out" />
 	</ImageHover>
 </a>
 <Container>
@@ -65,7 +64,7 @@
 
 		<aside class="flex mb-6 space-x-2">
 			{#each categories as category}
-				<Tag {category}></Tag>
+				<Tag {category} />
 			{/each}
 		</aside>
 	{/if}

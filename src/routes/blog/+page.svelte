@@ -1,9 +1,11 @@
 <script lang="ts">
-	import PostsList from '$lib/components/PostsList.svelte';
-	import Pagination from '$lib/components/Pagination.svelte';
-	import { siteDescription, siteTitle } from '$lib/config';
 	import Container from '$lib/components/Container.svelte';
-	export let data: any;
+	import Pagination from '$lib/components/Pagination.svelte';
+	import PostsList from '$lib/components/PostsList.svelte';
+	import { siteDescription, siteTitle } from '$lib/config';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -16,7 +18,5 @@
 
 	<PostsList posts={data.posts} />
 
-	
-		<Pagination currentPage={1} totalPosts={data.total} />
-	
+	<Pagination currentPage={1} totalPosts={data.total} />
 </Container>

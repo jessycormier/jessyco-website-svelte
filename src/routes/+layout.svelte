@@ -1,18 +1,18 @@
 <script lang="ts">
 	import '$lib/styles/main.scss';
 
-	import { siteTitle, siteLink } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
-	import { currentPage } from '$lib/stores/store';
+	import Container from '$lib/components/Container.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import SkipToMainContent from '$lib/components/SkipToMainContent.svelte';
-	import { navItems } from '$lib/config';
+	import { navItems, siteLink, siteTitle } from '$lib/config';
+	import { currentPage } from '$lib/stores/store';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import Container from '$lib/components/Container.svelte';
+	import type { PageData } from './$types';
 
-	export let data: any;
+	export let data: PageData;
 	export const prerender = true;
 
 	const animationDurationBase = 250;

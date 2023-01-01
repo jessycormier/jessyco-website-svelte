@@ -1,12 +1,13 @@
 import { browser } from '$app/environment';
 import { STORAGE_KEY_THEME_MODE } from '$lib/storage-keys';
 import { ThemeMode } from '$lib/enums/theme-modes.enum';
+import { noop } from '$lib/functions/noop.function';
 
 const DEFAULT_THEME_MODE = ThemeMode.Dark;
 
 export class ThemeModeSwitcher {
 	constructor() {
-		let currentThemeMode = browser ? window.localStorage.getItem(STORAGE_KEY_THEME_MODE) : DEFAULT_THEME_MODE;
+		const currentThemeMode = browser ? window.localStorage.getItem(STORAGE_KEY_THEME_MODE) : DEFAULT_THEME_MODE;
 
 		if (!currentThemeMode) {
 			this.setThemeMode(DEFAULT_THEME_MODE);
@@ -14,11 +15,11 @@ export class ThemeModeSwitcher {
 	}
 
 	public currentThemeMode() {
-		let currentThemeMode = browser ? localStorage.getItem(STORAGE_KEY_THEME_MODE) : DEFAULT_THEME_MODE;
+		const currentThemeMode = browser ? localStorage.getItem(STORAGE_KEY_THEME_MODE) : DEFAULT_THEME_MODE;
 
-		let isThemeModeLight = currentThemeMode === 'light';
-		let isThemeModeDark = currentThemeMode === 'dark';
-		// let hasDefinedThemeMode = (isThemeModeDark || isThemeModeLight);
+		const isThemeModeLight = currentThemeMode === 'light';
+		const isThemeModeDark = currentThemeMode === 'dark';
+		// const hasDefinedThemeMode = (isThemeModeDark || isThemeModeLight);
 
 		if (isThemeModeLight) {
 			return ThemeMode.Light;
@@ -44,14 +45,14 @@ export class ThemeModeSwitcher {
 	}
 
 	setThemeMode = (themeMode: ThemeMode) => {
-		let htmlElement = document?.getElementsByTagName('html')[0];
+		const htmlElement = document?.getElementsByTagName('html')[0];
 		htmlElement?.classList?.remove(ThemeMode.Dark, ThemeMode.Light);
 		htmlElement?.classList?.add(themeMode);
 
-		let bodyElement = document?.body;
+		const bodyElement = document?.body;
 		bodyElement?.classList?.remove(ThemeMode.Dark, ThemeMode.Light);
 		bodyElement?.classList?.add(themeMode);
 
-		browser ? localStorage.setItem(STORAGE_KEY_THEME_MODE, themeMode) : () => {};
+		browser ? localStorage.setItem(STORAGE_KEY_THEME_MODE, themeMode) : noop();
 	};
 }

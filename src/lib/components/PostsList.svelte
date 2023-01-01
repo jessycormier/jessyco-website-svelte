@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { slugify } from '$lib/slugify.function';
+	import type { PostMeta } from '$lib/interfaces/post-meta.interface';
+	import { slugify } from '$lib/functions/slugify.function';
 	import dayjs from 'dayjs';
 	import { cubicOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import ImageHover from './ImageHover.svelte';
 	import Tag from './Tag.svelte';
-	export let posts = [] as any;
+	
+	export let posts = [] as PostMeta[]; 
 </script>
 
 <div class="flex flex-col gap-12">

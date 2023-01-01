@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { currentPage } from '$lib/stores/store';
 
-	export let href: any;
+	export let href: string;
 	export let external = false;
 
 	$: isCurrentPage = $currentPage.startsWith(href);
