@@ -1,14 +1,16 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
 	import { siteTitle } from '$lib/config';
+	import type { PageData } from './$types';
 
-	export let data;
+	export let data: PageData;
 	const { uniqueCategories } = data;
 </script>
 
 <svelte:head>
 	<title>Blog | Categories - {siteTitle}</title>
 </svelte:head>
+
 <Container>
 	<div>
 		<h1 class="text-4xl mb-8">All blog categories</h1>

@@ -1,15 +1,14 @@
-import fetchPosts from '$lib/fetchPosts';
+import fetchPostsMeta from '$lib/fetchPosts';
+import type { PageServerLoad } from './$types';
 
-export const load = async ({ params }: any) => {
-	const category = params.category;
-	const page = params.page || 1;
-	const options = { category, limit: -1 };
-	const { posts } = await fetchPosts(options);
-
+export const load = (async ({ params }) => {
+	const { category, page = 1 } = params;
+	const { posts: postsMeta } = await fetchPostsMeta({ category, limit: -1 });
+	const total = postsMeta.length;
 	return {
-		posts,
+		posts: postsMeta,
 		category,
 		page,
-		total: posts.length
+		total
 	};
-};
+}) satisfies PageServerLoad;

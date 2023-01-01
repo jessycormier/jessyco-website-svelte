@@ -1,7 +1,6 @@
 ---
 date: 2022-12-28T04:00:00.000Z
 title: I guess I lied?
-slug: i-guess-i-lied
 excerpt: Well it's about that time again where I find that I'm looking for a new challenge.
 categories:
   - Blog Post
@@ -16,7 +15,7 @@ Learning Svelte and getting the context switching from SSR and client will be a 
 
 I've been able to make a neat thing where I can generate a low poly background like
 
-<img src="/api/polybg.svg?w=80&h=80&s=jessy" />
+<img src="/api/polybg/80x80/jessy" alt="example of polybg api" />
 
 and control the size easily. This is what I'm using for these blog posts images for now to give the site a bit more life.
 
