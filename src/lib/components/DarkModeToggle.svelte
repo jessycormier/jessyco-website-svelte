@@ -15,12 +15,14 @@
 	const widthClasses = 'w-5';
 </script>
 
-<button on:click={onToggleThemeClick} class="cursor-pointer transition-colors {widthClasses}">
+<button on:click={onToggleThemeClick} class="cursor-pointer transition-colors {widthClasses}" title="Toggle Theme">
 	{#if theme.currentThemeMode() === ThemeMode.Dark}
 		<SunIcon {widthClasses} {colorClasses} />
+		<span class="sr-only">Switch to light theme</span>
 	{/if}
 
 	{#if theme.currentThemeMode() === ThemeMode.Light}
 		<MoonIcon {widthClasses} {colorClasses} />
+		<span class="sr-only">Switch to dark theme</span>
 	{/if}
 </button>

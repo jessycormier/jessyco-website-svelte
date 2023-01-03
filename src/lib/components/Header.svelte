@@ -7,16 +7,16 @@
 
 <div class="flex items-center content-between font-mono my-16">
 	<Logo />
-	<nav class="grow">
-		<ol class="list-reset flex justify-end items-center gap-1">
+	<nav aria-label="main menu" class="grow">
+		<ul class="list-reset flex justify-end items-center gap-1">
 			{#each navItems as page}
-				<NavItem href={page.route} external={page.external}>
+				<NavItem href={page.route} external={page.external} ariaDetail={page.ariaDetail}>
 					{page.title}
 				</NavItem>
 			{/each}
 			<li>
 				<DarkModeToggle />
 			</li>
-		</ol>
+		</ul>
 	</nav>
 </div>

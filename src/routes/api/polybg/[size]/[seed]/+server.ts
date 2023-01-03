@@ -22,7 +22,7 @@ export const GET = (({ params }) => {
 
 		return new Response(pattern, {
 			headers: {
-				// 'Cache-Control': `max-age=0, s-max-age=${0}`,
+				'Cache-Control': `public, max-age=2629000, s-max-age=2629000`,
 				'Content-Type': 'image/svg+xml'
 			}
 		});

@@ -3,6 +3,7 @@
 
 	export let href: string;
 	export let external = false;
+	export let ariaDetail: string = '';
 
 	$: isCurrentPage = $currentPage.startsWith(href);
 </script>
@@ -12,6 +13,7 @@
 	<a
 		class="p-2 my-3"
 		{href}
+		aria-details="{ariaDetail}"
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}
 		rel={external ? 'external' : undefined}>

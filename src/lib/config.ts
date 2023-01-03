@@ -1,5 +1,5 @@
-import GitHubIcon from "./components/icons/GitHubIcon.svelte";
-import TwitterIcon from "./components/icons/TwitterIcon.svelte";
+import GitHubIcon from './components/icons/GitHubIcon.svelte';
+import TwitterIcon from './components/icons/TwitterIcon.svelte';
 
 export const siteTitle = 'Jessy.co';
 export const siteDescription = 'A personal homepage for Jessy Cormier';
@@ -12,14 +12,12 @@ export const navItems: {
 	title: string;
 	route: string;
 	external?: boolean;
+	ariaDetail?: string;
 }[] = [
-	// {
-	// 	title: 'Index',
-	// 	route: '/'
-	// },
 	{
 		title: 'Blog',
-		route: '/blog'
+		route: '/blog',
+		ariaDetail: 'My blog posts'
 	},
 	{
 		title: 'RSS',
@@ -27,7 +25,6 @@ export const navItems: {
 		external: true
 	}
 ];
-// <a href="" >RSS</a>
 
 export const socialLinks = [
 	{
@@ -40,4 +37,4 @@ export const socialLinks = [
 		sr: 'GitHub account',
 		icon: GitHubIcon
 	}
-]
+];
