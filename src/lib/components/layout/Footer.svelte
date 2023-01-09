@@ -1,21 +1,22 @@
 <script lang="ts">
 	import { siteAuthor, socialLinks } from '$lib/config';
 	import Logo from './Logo.svelte';
+	import LogoTitle from './LogoTitle.svelte';
 </script>
 
 <footer class="py-4 sm:py-6 mt-12">
 	<hr class="my-6 lg:my-8 border-gray-200 sm:mx-auto dark:border-gray-800 " />
 	<div class="md:flex md:justify-between">
 		<div class="mb-6 md:mb-0">
-			<div class="mb-4">
-				<Logo cssClasses="text-2xl" />
+			<div class="mb-4 text-center">
+				<LogoTitle cssClasses="text-2xl" />
 			</div>
 			<div class="pl-1 text-xs">
 				<span class="tex text-gray-500 dark:text-gray-400 font-mono">
 					&copy;{new Date().getFullYear()}
 					{siteAuthor}
 					<br />
-		
+
 					Built with ☕,
 					<a href="https://kit.svelte.dev">
 						Svelte<span class="opacity-60">Kit</span>
@@ -55,7 +56,7 @@
 					</li>
 				</ul>
 			</div>
-			
+
 			<!-- <div>
 				<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
 				<ul class="text-gray-600 dark:text-gray-400">
@@ -69,8 +70,6 @@
 			</div> -->
 		</div>
 	</div>
-	
-	<div class="sm:flex sm:items-center sm:justify-between mt-16">
-		
-	</div>
+
+	<div class="sm:flex sm:items-center sm:justify-between mt-16" />
 </footer>

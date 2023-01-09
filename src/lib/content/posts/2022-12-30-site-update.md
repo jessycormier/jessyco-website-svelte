@@ -1,6 +1,6 @@
 ---
 date: 2022-12-30T04:00:00.000Z
-title: Site Update
+title: Site Update Dec 30th
 excerpt: Website update.
 categories:
   - Blog Post
