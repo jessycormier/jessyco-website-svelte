@@ -23,11 +23,10 @@
 
 	onMount(() => {
 		const navRoutes = navItems.map((item) => item.route);
-
 		preloadCode(...navRoutes);
 	});
 	const content =
-		"Hello!, I'm Jessy 👋 I'm a Senior Front-End Developer with a passion for web development and user experience.";
+		"Hello!, I'm Jessy👋 I'm a Senior Front-End Developer with a passion for web development and user experience. Come visit my site, maybe you'll find something useful here!";
 </script>
 
 <svelte:head>
@@ -48,7 +47,7 @@
 	<meta property="twitter:url" content={siteLink} />
 	<meta property="twitter:title" content={siteTitle} />
 	<meta property="twitter:description" {content} />
-	<meta property="twitter:image" content="/social.svg" />
+	<meta property="twitter:image" content="{siteLink}/social.svg" />
 </svelte:head>
 <SkipToMainContent />
 
