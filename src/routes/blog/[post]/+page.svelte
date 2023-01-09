@@ -16,10 +16,9 @@
 	export let data: PageData;
 
 	const { title, excerpt, date, updated, categories, author = 'Jessy Cormier' } = data.meta;
-
+	
 	function onBackClick() {
 		history.back();
-		console.log('You went back, nice.');
 	}
 </script>
 
@@ -31,19 +30,27 @@
 	<meta name="description" content={excerpt} />
 
 	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content={siteLink + data.path} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={excerpt} />
+	<meta property="og:description" content="{excerpt}" />
+	<meta property="og:image:alt" content="{excerpt}" />
+	<meta property="og:image:height" content="600" />
+	<meta property="og:image:width" content="1200" />
 	<meta property="og:image" content="{siteLink}/api/polybg/1200x630/{slugify(title)}" />
-
+	<meta property="og:site_name" content="Jessy.Co" />
+	<meta property="og:title" content="{title}" />
+	<meta property="og:type" content="object" />
+	<meta property="og:url" content="{siteLink + data.path}" />
+	
 	<!-- Twitter -->
-	<meta property="twitter:card" content="{siteLink}/api/polybg/800x418/{slugify(title)}" />
-	<meta property="twitter:url" content={siteLink + data.path} />
-	<meta property="twitter:title" content={title} />
-	<meta property="twitter:description" content={excerpt} />
-	<meta property="twitter:image" content="{siteLink}/api/polybg/1200x630/{slugify(title)}" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description" content="{excerpt}" />
+	<meta name="twitter:image:src" content="{siteLink}/api/polybg/800x418/{slugify(title)}" />
+	<meta name="twitter:site" content="@jessycormier" />
+	<meta name="twitter:creator" content="@jessycormier" />
+	<meta name="twitter:title" content="{title}" />
+	
+	<meta name="twitter:url" content={siteLink + data.path} />
 	<meta name="twitter:image:alt" content={title} />
+	
 </svelte:head>
 
 <a href="#top" on:click={onBackClick} aria-label="Go back to previous page">
