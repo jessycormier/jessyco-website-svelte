@@ -3,8 +3,8 @@
 
 	import { preloadCode } from '$app/navigation';
 	import Container from '$lib/components/Container.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
+	import Header from '$lib/components/layout/Header.svelte';
 	import SkipToMainContent from '$lib/components/SkipToMainContent.svelte';
 	import { navItems, siteLink, siteTitle } from '$lib/config';
 	import { currentPage } from '$lib/stores/store';

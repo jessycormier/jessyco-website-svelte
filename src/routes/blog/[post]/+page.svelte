@@ -1,8 +1,9 @@
 <script lang="ts">
+	import AnimatedText from '$lib/components/AnimatedText.svelte';
 	import Container from '$lib/components/Container.svelte';
 	import ImageHover from '$lib/components/ImageHover.svelte';
 	import Tag from '$lib/components/Tag.svelte';
-	import { siteTitle } from '$lib/config';
+	import { siteLink, siteTitle } from '$lib/config';
 	import { slugify } from '$lib/functions/slugify.function';
 	import dayjs from 'dayjs';
 	import relativeTime from 'dayjs/plugin/relativeTime';
@@ -16,26 +17,48 @@
 	export let data: PageData;
 
 	const { title, excerpt, date, updated, categories, author = 'Jessy Cormier' } = data.meta;
+
+	function onBackClick() {
+		history.back();
+		console.log('You went back, nice.');
+	}
 </script>
 
 <svelte:head>
 	<title>{title} - {siteTitle}</title>
 	<meta data-key="description" name="description" content={excerpt} />
+
+	<meta name="title" content={siteTitle} />
+	<meta name="description" content={excerpt} />
+
+	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="article" />
+	<meta property="og:url" content={siteLink + data.path} />
 	<meta property="og:title" content={title} />
-	<meta name="twitter:title" content={title} />
 	<meta property="og:description" content={excerpt} />
-	<meta name="twitter:description" content={excerpt} />
+	<meta property="og:image" content="/api/polybg/1200x630/{slugify(title)}" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="/api/polybg/800x418/{slugify(title)}" />
+	<meta property="twitter:url" content={siteLink + data.path} />
+	<meta property="twitter:title" content={title} />
+	<meta property="twitter:description" content={excerpt} />
+	<meta property="twitter:image" content="/api/polybg/1200x630/{slugify(title)}" />
+	<meta name="twitter:image:alt" content={title} />
 </svelte:head>
 
-<a href="#top" on:click={() => history.back()}>
+<a href="#top" on:click={onBackClick} aria-label="Go back to previous page">
 	<ImageHover showDetails={true} title="Go Back">
-		<img src="/api/polybg/1200x600/{slugify(title)}" alt="" class="h-72 object-cover w-full ease-in-out" />
+		<img src="/api/polybg/1200x630/{slugify(title)}" alt="" class="h-72 object-cover w-full ease-in-out" />
 	</ImageHover>
 </a>
 <Container>
 	<article class="prose prose-stone max-w-none dark:prose-invert lg:prose-xl m-auto mt-24">
-		<h1 class="">{title}</h1>
+		<h1>
+			<AnimatedText>
+				{title}
+			</AnimatedText>
+		</h1>
 		<div class="mb-8 text-sm text-gray-500">
 			{#if author}
 				by <span class="text-gray-700 dark:text-gray-300">{author}</span>

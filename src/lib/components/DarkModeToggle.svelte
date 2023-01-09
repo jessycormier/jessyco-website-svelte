@@ -7,6 +7,7 @@
 	let theme = new ThemeModeSwitcher();
 
 	const onToggleThemeClick = () => {
+		console.log('lkjsdflkjsdlfkj')
 		theme.toggleThemeMode();
 		theme = theme;
 	};

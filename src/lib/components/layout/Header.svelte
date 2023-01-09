@@ -1,12 +1,16 @@
 <script lang="ts">
 	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte';
 	import { navItems } from '$lib/config';
+	import LogoTitle from './LogoTitle.svelte';
+	import NavItem from '../NavItem.svelte';
 	import Logo from './Logo.svelte';
-	import NavItem from './NavItem.svelte';
 </script>
 
 <div class="flex items-center content-between font-mono my-16">
-	<Logo />
+	<div>
+		<LogoTitle />
+	</div>
+
 	<nav aria-label="main menu" class="grow">
 		<ul class="list-reset flex justify-end items-center gap-1">
 			{#each navItems as page}
