@@ -25,7 +25,7 @@
 				</time>
 			</div>
 
-			<div class="hidden sm:basis-32 sm:flex items-center">
+			<div class="basis-12 sm:basis-32 flex items-center">
 				<a href="/blog/{post.slug}">
 					<ImageHover showDetails={false}>
 						<img
@@ -34,10 +34,6 @@
 							class="h-32 object-cover w-full aspect-square motion-safe:group-hover:scale-110 transition duration-300 ease-in-out" />
 					</ImageHover>
 
-					<!-- <img
-					alt="Guitar"
-					src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-					class="aspect-square h-full w-full object-cover" /> -->
 				</a>
 			</div>
 

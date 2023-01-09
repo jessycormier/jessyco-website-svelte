@@ -9,7 +9,6 @@
 	import relativeTime from 'dayjs/plugin/relativeTime';
 	import timezone from 'dayjs/plugin/timezone';
 	import type { PageData } from './$types';
-
 	dayjs.extend(relativeTime);
 	dayjs.extend(timezone);
 	dayjs.tz.setDefault('Atlantic Standard Time');
@@ -36,14 +35,14 @@
 	<meta property="og:url" content={siteLink + data.path} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={excerpt} />
-	<meta property="og:image" content="/api/polybg/1200x630/{slugify(title)}" />
+	<meta property="og:image" content="{siteLink}/api/polybg/1200x630/{slugify(title)}" />
 
 	<!-- Twitter -->
-	<meta property="twitter:card" content="/api/polybg/800x418/{slugify(title)}" />
+	<meta property="twitter:card" content="{siteLink}/api/polybg/800x418/{slugify(title)}" />
 	<meta property="twitter:url" content={siteLink + data.path} />
 	<meta property="twitter:title" content={title} />
 	<meta property="twitter:description" content={excerpt} />
-	<meta property="twitter:image" content="/api/polybg/1200x630/{slugify(title)}" />
+	<meta property="twitter:image" content="{siteLink}/api/polybg/1200x630/{slugify(title)}" />
 	<meta name="twitter:image:alt" content={title} />
 </svelte:head>
 
