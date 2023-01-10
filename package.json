@@ -1,5 +1,6 @@
 {
   "name": "jessy-co-website",
+  "description": "My personal homepage.",
   "version": "0.0.1",
   "private": true,
   "scripts": {

@@ -1,4 +1,3 @@
 User-Agent: *
-Disallow: /api/
 
 Sitemap: https://jessy.co/api/rss.xml
