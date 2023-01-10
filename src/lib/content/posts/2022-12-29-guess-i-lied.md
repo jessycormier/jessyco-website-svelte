@@ -3,8 +3,8 @@ date: 2022-12-28T04:00:00.000Z
 title: I guess I lied?
 excerpt: Well it's about that time again where I find that I'm looking for a new challenge.
 categories:
-  - Blog Post
-  - Svelte
+  - blog-post
+  - svelte
 ---
 
 So it turns out I didn't stick with Angular... 
