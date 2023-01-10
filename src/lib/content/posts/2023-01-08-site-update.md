@@ -3,8 +3,8 @@ date: 2023-01-08T04:00:00.000Z
 title: Site Update Jan 8th
 excerpt: Website update includes updated logo and more.
 categories:
-  - Blog Post
-  - Site Update
+  - blog-post
+  - site-update
 ---
 
 <script lang="ts">

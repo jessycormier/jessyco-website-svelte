@@ -3,7 +3,7 @@ date: 2023-01-03T04:00:00.000Z
 title: My Visual Studio Code Setup
 excerpt: General setup I use for user settings in Visual Studio Code.
 categories:
-  - VS Code
+  - vs-code
 ---
 
 I've found value in finding these kinds of posts by other people online so I thought I would share my setup to maybe benifit you.

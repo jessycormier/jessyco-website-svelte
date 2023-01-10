@@ -24,7 +24,4 @@
 
 <!-- Devider -->
 <!-- <li><span class="text-gray-500 mx-2">/</span></li> -->
-
 <!-- <li class="dark:bg-gray-50 dark:text-gray-900 bg-gray-900 text-gray-50 font-bold px-2 rounded">You're Here Link</li> -->
-<style class="scss">
-</style>

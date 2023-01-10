@@ -1,15 +1,31 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
+
+	const todos: {
+		icon?: string;
+		desc?: string;
+		completed?: boolean;
+	}[] = [
+		{ icon: '🐣', desc: 'Sort tags on posts...' },
+		{ icon: '😩', desc: 'Fix up the GMT issue on dates.' },
+		{ icon: '😍', desc: 'Create a fix for Tringlify lib for @Typed library.' },
+		{ icon: '🤔', desc: 'Add a check for "back" button on blog posts so users don\'t go back to search engine but back to \"/blog\" if they came from google or whatever.' },
+		{ icon: '🏅', desc: 'Add details to changelog.md about history of project' },
+		{ icon: '🏅', desc: 'Add testing framework that svelte suggests' },
+		{ icon: '🤦', desc: 'Maybe track todo\'s in a single location rather than spread between here and Obsidian' },
+		{ icon: '📄', desc: 'Add metadata for posts', completed: true },
+
+	];
 </script>
 
 <Container>
 	<section class="prose prose-stone max-w-none dark:prose-invert lg:prose-xl m-auto mt-24">
-		<h1 class="dark:text-">Todos</h1>
-		<ul>
-			<li>Add metadata for posts</li>
-			<li>Fix up the GMT issue on dates.</li>
-			<li>Create a fix for Tringlify lib for @Typed library.</li>
-			<li>add a check for "back" button on blog posts so users don't go back to search engine but back to "/blog" if they came from google or whatever.</li>
+		<h1>&lbrace; Todos &rbrace;</h1>
+		<p>A list of todos in no particular order and most likely out of date</p>
+		<ul class="font-mono">
+			{#each todos as todo }
+				<li class="{todo.completed ? 'line-through':''}">{todo.icon} {todo.desc}</li>
+			{/each}
 		</ul>
 	</section>
 </Container>

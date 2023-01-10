@@ -33,7 +33,6 @@
 							alt="{post.title}"
 							class="h-32 object-cover w-full aspect-square motion-safe:group-hover:scale-110 transition duration-300 ease-in-out" />
 					</ImageHover>
-
 				</a>
 			</div>
 
