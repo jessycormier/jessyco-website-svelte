@@ -37,8 +37,11 @@
 			<div>
 				<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Navigation</h2>
 				<ul class="text-gray-600 dark:text-gray-400">
-					<li class="mb-4">
-						<a href="/blog" class="hover:underline ">Blog</a>
+					<li>
+						<a href="/blog" class="hover:underline ">Blog Posts</a>
+					</li>
+					<li>
+						<a href="/blog/category/site-update" class="hover:underline">Site Updates</a>
 					</li>
 					<li>
 						<a href="/api/rss.xml" class="hover:underline">RSS</a>
@@ -48,11 +51,14 @@
 			<div>
 				<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">The Happenings</h2>
 				<ul class="text-gray-600 dark:text-gray-400">
-					<li class="mb-4">
-						<a href="/todos" class="hover:underline">Todos</a>
-					</li>
 					<li>
 						<a href="/now" class="hover:underline">Now</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/jessycormier" class="hover:underline">Twitter</a>
+					</li>
+					<li>
+						<a href="/todos" class="hover:underline">Todos</a>
 					</li>
 				</ul>
 			</div>
