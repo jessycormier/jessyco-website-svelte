@@ -1,5 +1,4 @@
 <script lang="ts">
-	import AnimatedText from '$lib/components/AnimatedText.svelte';
 	import Container from '$lib/components/Container.svelte';
 	import PostsList from '$lib/components/PostsList.svelte';
 	import ProfilePicture from '$lib/components/ProfilePicture.svelte';
@@ -13,6 +12,7 @@
 <svelte:head>
 	<title>{siteTitle}</title>
 </svelte:head>
+
 <section class="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl p-4 overflow-hidden top-0 left-0 right-0">
 	<div class="container mx-auto">
 		<div class="flex justify-start content-center">
@@ -42,6 +42,5 @@
 		<p class="text-center pt-12">
 			<a href="/blog">See More</a>
 		</p>
-		<!-- <Pagination currentPage={1} totalPosts={data.total} /> -->
 	</section>
 </Container>

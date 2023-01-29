@@ -1,6 +1,4 @@
 <script lang="ts">
-	import '$lib/styles/main.scss';
-
 	import { preloadCode } from '$app/navigation';
 	import Container from '$lib/components/Container.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
@@ -8,12 +6,12 @@
 	import SkipToMainContent from '$lib/components/SkipToMainContent.svelte';
 	import { navItems, siteLink, siteTitle } from '$lib/config';
 	import { currentPage } from '$lib/stores/store';
+	import '$lib/styles/main.scss';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	export const prerender = true;
 
 	const animationDurationBase = 250;
 	const transitionIn = { delay: 150, duration: animationDurationBase };

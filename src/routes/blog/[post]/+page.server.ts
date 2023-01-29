@@ -3,7 +3,7 @@ import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params }) => {
 	try {
-		const post = await import(`../../../lib/content/posts/${params.post}.md`);
+		const post = await import(`../../../content/${params.post}.md`);
 
 		return {
 			PostContent: post.default.render().html,

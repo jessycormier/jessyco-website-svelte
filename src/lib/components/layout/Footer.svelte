@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { siteAuthor, socialLinks } from '$lib/config';
-	import Logo from './Logo.svelte';
 	import LogoTitle from './LogoTitle.svelte';
 </script>
 
@@ -26,7 +25,7 @@
 			</div>
 			<div class="pl-1 text-xs pt-2 flex mt-4 space-x-2 sm:justify-left sm:mt-0">
 				{#each socialLinks as { href, sr, icon }}
-					<a {href} class="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer">
+					<a {href} class="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer p-1">
 						<svelte:component this={icon} />
 						<span class="sr-only">{sr}</span>
 					</a>

@@ -7,7 +7,7 @@ export const prerender = true;
 export const GET = (async () => {
 	const data = await Promise.all(
 		// eslint-disable-next-line no-unused-vars
-		Object.entries(import.meta.glob('$lib/content/posts/*.md')).map(async (a) => {
+		Object.entries(import.meta.glob('@content/*.md')).map(async (a) => {
 			const path = a[0];
 			const page = a[1];
 			const { metadata } = (await page()) as { metadata: PostMeta };
