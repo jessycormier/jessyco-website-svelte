@@ -10,11 +10,8 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import type { PageData } from './$types';
-	import { page } from '$app/stores';
-	import { stringify } from 'postcss';
 
 	export let data: PageData;
-	// export const prerender = true;
 
 	const animationDurationBase = 250;
 	const transitionIn = { delay: 150, duration: animationDurationBase };
@@ -51,12 +48,6 @@
 	<meta property="twitter:image" content="{siteLink}/social.svg" />
 </svelte:head>
 <SkipToMainContent />
-
-
-<div class="border border-red-500 p-2">
-	{JSON.stringify($page.data)}
-</div>
-
 
 <Container>
 	<Header />
