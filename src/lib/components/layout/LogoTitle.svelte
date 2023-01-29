@@ -3,7 +3,7 @@
 	import Logo from './Logo.svelte';
 	export let cssClasses = 'text-3xl';
 
-	const bracketColorCss = 'fill-blue-800 group-hover:fill-amber-500 duration-700 group-hover:animate-pulse';
+	const bracketColorCss = 'fill-blue-800 group-hover:fill-amber-500 group-focus:fill-amber-500 duration-700 group-hover:animate-pulse group-focus:animate-pulse';
 	const letterColorCss = 'duration-75';
 </script>
 

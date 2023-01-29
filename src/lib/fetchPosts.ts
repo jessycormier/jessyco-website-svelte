@@ -3,7 +3,7 @@ import type { PostMeta } from './interfaces/post-meta.interface';
 
 const fetchPostsMeta = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
 	const posts: PostMeta[] = await Promise.all(
-		Object.entries(import.meta.glob('/src/lib/content/posts/*.md')).map(async ([path, resolver]) => {
+		Object.entries(import.meta.glob('/src/content/*.md')).map(async ([path, resolver]) => {
 			const { metadata } = (await resolver()) as { metadata: PostMeta };
 			const slug = path?.split('/')?.pop()?.slice(0, -3);
 

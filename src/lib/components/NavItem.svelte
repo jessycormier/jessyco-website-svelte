@@ -3,7 +3,7 @@
 
 	export let href: string;
 	export let external = false;
-	export let ariaDetail: string = '';
+	export let ariaDetail = '';
 
 	$: isCurrentPage = $currentPage.startsWith(href);
 </script>

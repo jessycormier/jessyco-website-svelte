@@ -9,10 +9,10 @@ const config = {
 				inter: ['Inter', 'sans-serif']
 			},
 			animation: {
-				'text': 'text 30s ease infinite',
+				text: 'text 30s ease infinite'
 			},
 			keyframes: {
-				'text': {
+				text: {
 					'0%, 100%': {
 						'background-size': '2000% 2000%',
 						'background-position': 'left center'
@@ -21,7 +21,7 @@ const config = {
 						'background-size': '2000% 2000%',
 						'background-position': 'right center'
 					}
-				},
+				}
 			}
 		},
 		colors: {
@@ -45,8 +45,8 @@ const config = {
 			slate: colors.slate,
 			red: colors.red,
 			yellow: colors.yellow,
-      indigo: colors.indigo,
-      purple: colors.purple,
+			indigo: colors.indigo,
+			purple: colors.purple,
 			white: colors.white,
 			black: colors.black
 		}

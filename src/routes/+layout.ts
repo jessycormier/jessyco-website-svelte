@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const prerender = 'auto';
+export const prerender = true;
 export const csr = true;
 
 export const load = (async ({ url }) => {

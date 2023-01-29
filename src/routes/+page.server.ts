@@ -8,5 +8,9 @@ export const load = (async ({ url, fetch }) => {
 	const posts: PostMeta[] = (await postRes.json()) || [];
 	const total: number = (await totalRes.json()) || 0;
 
-	return { posts: posts.splice(0, 3), total };
+	return {
+		posts: posts.splice(0, 5),
+		total: total
+	};
+	
 }) satisfies PageServerLoad;

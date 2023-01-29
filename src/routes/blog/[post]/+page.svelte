@@ -34,7 +34,7 @@
 	<meta property="og:image:alt" content="{excerpt}" />
 	<meta property="og:image:height" content="600" />
 	<meta property="og:image:width" content="1200" />
-	<meta property="og:image" content="{siteLink}/api/polybg/1200x630/{slugify(title)}" />
+	<meta property="og:image" content="{siteLink}/polybg/1200x630/{slugify(title)}.svg" />
 	<meta property="og:site_name" content="Jessy.Co" />
 	<meta property="og:title" content="{title}" />
 	<meta property="og:type" content="object" />
@@ -43,7 +43,7 @@
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:description" content="{excerpt}" />
-	<meta name="twitter:image:src" content="{siteLink}/api/polybg/800x418/{slugify(title)}" />
+	<meta name="twitter:image:src" content="{siteLink}/polybg/800x418/{slugify(title)}.svg" />
 	<meta name="twitter:site" content="@jessycormier" />
 	<meta name="twitter:creator" content="@jessycormier" />
 	<meta name="twitter:title" content="{title}" />
@@ -53,11 +53,11 @@
 	
 </svelte:head>
 
-<a href="#top" on:click={onBackClick} aria-label="Go back to previous page">
+<button on:click={onBackClick} aria-label="Go back to previous page" class="w-full">
 	<ImageHover showDetails={true} title="Go Back">
-		<img src="/api/polybg/1200x630/{slugify(title)}" alt="" class="h-72 object-cover w-full ease-in-out" />
+		<img src="/polybg/1200x630/{slugify(title)}.svg" alt="" class="h-72 object-cover w-full ease-in-out" />
 	</ImageHover>
-</a>
+</button>
 <Container>
 	<article class="prose prose-stone max-w-none dark:prose-invert lg:prose-xl m-auto mt-24">
 		<h1>

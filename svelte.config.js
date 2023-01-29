@@ -1,4 +1,6 @@
-import adapter from '@sveltejs/adapter-vercel';
+// import adapter from '@sveltejs/adapter-vercel';
+// import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
@@ -19,9 +21,12 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		alias: {
+			'@content': '/src/content/*'
+		},
 		csp: {
 			mode: 'auto'
-		}
+		},
 	}
 };
 

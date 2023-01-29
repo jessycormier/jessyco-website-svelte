@@ -1,6 +1,4 @@
 <script lang="ts">
-	import '$lib/styles/main.scss';
-
 	import { preloadCode } from '$app/navigation';
 	import Container from '$lib/components/Container.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
@@ -8,12 +6,15 @@
 	import SkipToMainContent from '$lib/components/SkipToMainContent.svelte';
 	import { navItems, siteLink, siteTitle } from '$lib/config';
 	import { currentPage } from '$lib/stores/store';
+	import '$lib/styles/main.scss';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import type { PageData } from './$types';
+	import { page } from '$app/stores';
+	import { stringify } from 'postcss';
 
 	export let data: PageData;
-	export const prerender = true;
+	// export const prerender = true;
 
 	const animationDurationBase = 250;
 	const transitionIn = { delay: 150, duration: animationDurationBase };
@@ -50,6 +51,12 @@
 	<meta property="twitter:image" content="{siteLink}/social.svg" />
 </svelte:head>
 <SkipToMainContent />
+
+
+<div class="border border-red-500 p-2">
+	{JSON.stringify($page.data)}
+</div>
+
 
 <Container>
 	<Header />

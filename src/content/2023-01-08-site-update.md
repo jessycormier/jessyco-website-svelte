@@ -8,7 +8,7 @@ categories:
 ---
 
 <script lang="ts">
-    import Logo from '../../components/layout/Logo.svelte';
+    import Logo from '../lib/components/layout/Logo.svelte';
 </script>
 
 > Bug fixes and performance improvements.
