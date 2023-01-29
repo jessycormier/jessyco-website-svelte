@@ -7,10 +7,6 @@
 	const { uniqueCategories } = data;
 </script>
 
-<svelte:head>
-	<title>Blog | Categories - {siteTitle}</title>
-</svelte:head>
-
 <Container>
 	<div>
 		<h1 class="text-4xl mb-8">All blog categories</h1>

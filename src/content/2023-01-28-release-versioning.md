@@ -1,12 +1,12 @@
 ---
 
-date: 2023-01-26T04:00:00.000Z
+date: 2023-01-28T04:00:00.000Z
 title: "Release Versioning"
 
 author: 
   - Jessy Cormier
 
-excerpt: versioning doesn't need to be hard
+excerpt: versioning doesn't need to be hard, I give some feedback based on recent and past experiences with versioning.
 
 categories:
   - blog-post

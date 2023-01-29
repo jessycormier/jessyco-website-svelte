@@ -12,11 +12,6 @@
 	$: upperBound = Math.min(page * postsPerPage, totalPosts);
 </script>
 
-<svelte:head>
-	<title>Blog category - page {page} - {siteTitle}</title>
-	<meta data-key="description" name={siteDescription} />
-</svelte:head>
-
 <Container>
 	{#if posts.length}
 		<h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
