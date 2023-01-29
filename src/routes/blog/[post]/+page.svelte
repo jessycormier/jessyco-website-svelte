@@ -3,7 +3,6 @@
 	import Container from '$lib/components/Container.svelte';
 	import ImageHover from '$lib/components/ImageHover.svelte';
 	import Tag from '$lib/components/Tag.svelte';
-	import { siteLink, siteTitle } from '$lib/config';
 	import { slugify } from '$lib/functions/slugify.function';
 	import dayjs from 'dayjs';
 	import relativeTime from 'dayjs/plugin/relativeTime';
@@ -15,43 +14,12 @@
 
 	export let data: PageData;
 
-	const { title, excerpt, date, updated, categories, author = 'Jessy Cormier' } = data.meta;
+	const { title, content, excerpt, date, updated, categories, author = 'Jessy Cormier' } = data.post;
 	
 	function onBackClick() {
 		history.back();
 	}
 </script>
-
-<svelte:head>
-	<title>{title} - {siteTitle}</title>
-	<meta data-key="description" name="description" content={excerpt} />
-
-	<meta name="title" content={siteTitle} />
-	<meta name="description" content={excerpt} />
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:description" content="{excerpt}" />
-	<meta property="og:image:alt" content="{excerpt}" />
-	<meta property="og:image:height" content="600" />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image" content="{siteLink}/polybg/1200x630/{slugify(title)}.svg" />
-	<meta property="og:site_name" content="Jessy.Co" />
-	<meta property="og:title" content="{title}" />
-	<meta property="og:type" content="object" />
-	<meta property="og:url" content="{siteLink + data.path}" />
-	
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:description" content="{excerpt}" />
-	<meta name="twitter:image:src" content="{siteLink}/polybg/800x418/{slugify(title)}.svg" />
-	<meta name="twitter:site" content="@jessycormier" />
-	<meta name="twitter:creator" content="@jessycormier" />
-	<meta name="twitter:title" content="{title}" />
-	
-	<meta name="twitter:url" content={siteLink + data.path} />
-	<meta name="twitter:image:alt" content={title} />
-	
-</svelte:head>
 
 <button on:click={onBackClick} aria-label="Go back to previous page" class="w-full">
 	<ImageHover showDetails={true} title="Go Back">
@@ -78,10 +46,11 @@
 			{/if}
 		</div>
 
-		{@html data.PostContent}
+		{@html content}
+
 	</article>
 
-	<hr class="my-8" />
+	<hr class="mt-24 mb-12" />
 
 	{#if updated}
 		Last Updated: <strong>{dayjs(updated).fromNow()}</strong>
