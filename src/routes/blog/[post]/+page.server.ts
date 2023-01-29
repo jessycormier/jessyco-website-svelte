@@ -1,13 +1,22 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
+import { navItems, siteLink, siteTitle } from '$lib/config';
 
+export const ssr = true;
 export const load = (async ({ params }) => {
 	try {
-		const post = await import(`../../../content/${params.post}.md`);
+		const postContent = await import(`../../../content/${params.post}.md`);
 
 		return {
-			PostContent: post.default.render().html,
-			meta: { ...post.metadata, slug: params.post }
+			post: {
+				...postContent.metadata,
+				content: postContent.default.render().html
+				// slug: params.post
+			},
+			meta: {
+				title: postContent.metadata.title ? `${postContent.metadata.title} - ${siteTitle}` : siteTitle,
+				description: postContent.metadata.excerpt
+			}
 		};
 	} catch (err) {
 		throw error(404, err as App.Error);

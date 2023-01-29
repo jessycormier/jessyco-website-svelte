@@ -10,10 +10,6 @@
 	const { page, posts, category, total } = data;
 </script>
 
-<svelte:head>
-	<title>Category: {category} - {siteTitle}</title>
-</svelte:head>
-
 <Container>
 	<h1 class="text-4xl mb-8">Blog category: {category}</h1>
 	{#if posts.length}
