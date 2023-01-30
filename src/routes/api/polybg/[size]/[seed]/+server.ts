@@ -1,8 +1,6 @@
 import Trianglify from 'trianglify';
 import type { RequestHandler } from './$types';
 
-export const prerender = 'auto';
-
 /**
  * @todo fix Trianglify definition as it's outdated.
  */
