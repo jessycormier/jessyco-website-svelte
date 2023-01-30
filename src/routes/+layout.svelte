@@ -31,8 +31,8 @@
 	const siteDefaultDescription =
 			"Hello!, I'm Jessy👋 I'm a Senior Front-End Developer with a passion for web development and user experience. Come visit my site, maybe you'll find something useful here!";
 	const title = $page?.data?.meta?.title || siteTitle;
-	const ogImg = `${siteLink}/polybg/1200x630/${slugify($page?.data?.post?.title||'')}.svg`;
-	const twitterImg = `${siteLink}/polybg/800x418/${slugify($page?.data?.post?.title||'')}.svg`;
+	const ogImg = `${siteLink}/polybg/1200x630/${slugify($page?.data?.post?.title||'bg')}.png`;
+	const twitterImg = `${siteLink}/polybg/800x418/${slugify($page?.data?.post?.title||'bg')}.png`;
 	const description = $page?.data?.meta?.description || siteDefaultDescription;
 </script>
 

@@ -10,15 +10,13 @@ export const GET = (({ params }) => {
 
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const pattern = (trianglify({ width, height, seed }) as any)
-			.toSVGTree({
-				scaling: 'auto'
-			})
-			.toString();
+			.toCanvas()
+			.createPNGStream()
 
 		return new Response(pattern, {
 			headers: {
 				'Cache-Control': `public, max-age=2629000, s-max-age=2629000`,
-				'Content-Type': 'image/svg+xml'
+				'Content-Type': 'image/png'
 			}
 		});
 	} catch (error) {
