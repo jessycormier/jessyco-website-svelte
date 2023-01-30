@@ -3,8 +3,6 @@ import fetchPostsMeta from '$lib/fetchPosts';
 import { redirectWhenNoPages } from '$lib/functions/redirect-when-no-pages.function';
 import type { PageServerLoad } from './$types';
 
-export const prerender = false;
-
 export const load = (async ({ fetch, params }) => {
 	const pageNumber = parseInt(params.page) || 1;
 

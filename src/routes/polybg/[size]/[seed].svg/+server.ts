@@ -1,9 +1,6 @@
 import trianglify from 'trianglify';
 import type { RequestHandler } from './$types';
 
-// export const prerender = 'auto';
-export const prerender = true;
-
 export const GET = (({ params }) => {
 	try {
 		const { seed, size } = params;
