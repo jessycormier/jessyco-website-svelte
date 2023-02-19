@@ -18,10 +18,11 @@
 		<!-- <meta name="theme-color" content="#ffffff" /> -->
 		<!-- <meta name="color-scheme" content="dark light" /> breaks tailwinds dark/light mode rendering... -->
 		
-		<script>
+		<script nonce="jessyco">
 			/**
 			 * A IIFE to set the theme mode for the website.
-			 * Helps prevent flickering effect when using dark themes and refreshing.
+			 * Helps prevent flickering effect (FOUC) when using dark themes and =
+			 * refreshing.
 			 **/
 			(function themeSetter() {
 				const key = 'theme_mode';

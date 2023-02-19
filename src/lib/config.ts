@@ -21,7 +21,7 @@ export const navItems: {
 	},
 	{
 		title: 'RSS',
-		route: '/api/rss.xml',
+		route: '/rss.xml',
 		external: true
 	}
 ];

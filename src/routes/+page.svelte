@@ -3,7 +3,7 @@
 	import PostsList from '$lib/components/PostsList.svelte';
 	import ProfilePicture from '$lib/components/ProfilePicture.svelte';
 	import TextHighlight from '$lib/components/TextHighlight.svelte';
-	import { siteTitle } from '$lib/config';
+	import { siteTitle, siteURL } from '$lib/config';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -11,6 +11,8 @@
 
 <svelte:head>
 	<title>{siteTitle}</title>
+	<link rel="canonical" href={siteURL} />
+	<link rel="alternate" type="application/rss+xml" href={siteURL + '/rss.xml'} />
 </svelte:head>
 
 <section class="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl p-4 overflow-hidden top-0 left-0 right-0">

@@ -42,7 +42,7 @@
 						<a href="/blog/category/site-update" class="hover:underline">Site Updates</a>
 					</li>
 					<li>
-						<a href="/api/rss.xml" class="hover:underline">RSS</a>
+						<a href="/rss.xml" class="hover:underline">RSS</a>
 					</li>
 				</ul>
 			</div>

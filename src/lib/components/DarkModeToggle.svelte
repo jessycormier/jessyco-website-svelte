@@ -7,9 +7,8 @@
 	let theme = new ThemeModeSwitcher();
 
 	const onToggleThemeClick = () => {
-		console.log('toggled theme');
-		// theme.toggleThemeMode();
-		// theme = theme;
+		theme.toggleThemeMode();
+		theme = theme;
 	};
 
 	const colorClasses = 'text-gray-900 dark:text-yellow-500';

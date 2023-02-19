@@ -1,12 +1,11 @@
 import { siteDescription, siteLink, siteTitle, siteURL } from '$lib/config';
 import type { PostMeta } from '$lib/interfaces/post-meta.interface';
-import type { RequestHandler } from './$types';
+import type { RequestHandler } from '../rss.xml/$types';
 
 export const prerender = true;
 
 export const GET = (async () => {
 	const data = await Promise.all(
-		// eslint-disable-next-line no-unused-vars
 		Object.entries(import.meta.glob('/src/content/*.md')).map(async (a) => {
 			const path = a[0];
 			const page = a[1];
@@ -14,8 +13,8 @@ export const GET = (async () => {
 			const slug = path?.split('/')?.pop()?.slice(0, -3);
 			return { ...metadata, slug };
 		})
-	).then((posts) => {
-		return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+	).then((postData) => {
+		return postData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 	});
 
 	const render = (posts: PostMeta[]) => `<?xml version="1.0" encoding="UTF-8" ?>
