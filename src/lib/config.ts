@@ -3,7 +3,6 @@ import TwitterIcon from './components/icons/TwitterIcon.svelte';
 
 export const siteTitle = 'Jessy.co';
 export const siteDescription = 'A personal homepage for Jessy Cormier';
-export const siteURL =  'jessy.co';
 export const siteLink = 'https://jessy.co';
 export const siteAuthor = 'Jessy Cormier';
 

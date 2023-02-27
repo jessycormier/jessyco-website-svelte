@@ -1,4 +1,4 @@
-import { siteDescription, siteLink, siteTitle, siteURL } from '$lib/config';
+import { siteDescription, siteLink, siteTitle } from '$lib/config';
 import type { PostMeta } from '$lib/interfaces/post-meta.interface';
 import type { RequestHandler } from '../rss.xml/$types';
 
@@ -23,16 +23,16 @@ export const GET = (async () => {
 <title>${siteTitle}</title>
 <description>${siteDescription}</description>
 <link>${siteLink}</link>
-<atom:link href="https://${siteURL}/rss.xml" rel="self" type="application/rss+xml"/>
+<atom:link href="${siteLink}/rss.xml" rel="self" type="application/rss+xml"/>
 ${posts.map(postTemplate).join('')}
 </channel>
 </rss>
 `;
 
 	const postTemplate = (post: PostMeta) => `<item>
-<guid isPermaLink="true">https://${siteURL}/blog/${post.slug}</guid>
+<guid isPermaLink="true">${siteLink}/blog/${post.slug}</guid>
 <title>${post.title}</title>
-<link>https://${siteURL}/blog/${post.slug}</link>
+<link>${siteLink}/blog/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`;

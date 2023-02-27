@@ -1,4 +1,4 @@
-import { siteDescription, siteLink, siteTitle, siteURL } from '$lib/config';
+import { siteDescription, siteLink, siteTitle } from '$lib/config';
 import type { PostMeta } from '$lib/interfaces/post-meta.interface';
 import type { RequestHandler } from '../sitemap.xml/$types';
 
@@ -26,17 +26,17 @@ export const GET = (async () => {
   xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
   xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://${siteURL}/</loc>
+    <loc>${siteLink}/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <title>${siteTitle}</title>
   <description>${siteDescription}</description>
-  <link>>https://${siteURL}/</link>
-  <atom:link href="https://${siteURL}/rss.xml" rel="self" type="application/rss+xml" />
+  <link>>${siteLink}/</link>
+  <atom:link href="${siteLink}/rss.xml" rel="self" type="application/rss+xml" />
   ${posts.map(p => `
   <url>
-    <loc>https://${siteURL}/blog/${p.slug}</loc>
+    <loc>${siteLink}/blog/${p.slug}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>`).join('')}
