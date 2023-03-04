@@ -1,4 +1,8 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+	inject({ mode: dev ? 'development' : 'production' });
+	
 	import '$lib/styles/main.scss';
 
 	import Container from '$lib/components/Container.svelte';
