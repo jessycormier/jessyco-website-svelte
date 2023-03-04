@@ -85,7 +85,7 @@ This component lets you throw in extra CSS classes to chagne font-size or whatev
 
 ## All the other things
 
-This update touched a bunch of files, moving them for better organization and tweaks for better layout or accessibility. I found a wonderful article by Daniela; where they go over their experience trying to make their site more accessabile and it's been a great guide for me. https://sericaia.me/blog/2020-06-08/how-i-fixed-accessibility-on-my-website-and-how-you-can-fix-yours
+This update touched a bunch of files, moving them for better organization and tweaks for better layout or accessibility. I found a wonderful article by Daniela; where they go over their experience trying to make their site more accessabile and it's been a great guide for me. https://sericaia.me/posts/2020-06-08/how-i-fixed-accessibility-on-my-website-and-how-you-can-fix-yours
 
 I noticed an issue when viewing the site on mobile phones where the font was not rendering. I use this font https://rsms.me/inter/ on the site which at the time I got from Google and converted it to the a modern format. This update includes a the varients directly from the creator Rasmus Andersson. Do check out that site, it's got a really great setup to showcase the front. I love the "lab"!
 

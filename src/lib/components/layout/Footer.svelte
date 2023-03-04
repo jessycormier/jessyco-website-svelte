@@ -36,10 +36,10 @@
 				<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Navigation</h2>
 				<ul class="text-gray-600 dark:text-gray-400">
 					<li>
-						<a href="/blog" class="hover:underline ">Blog Posts</a>
+						<a href="/posts" class="hover:underline ">Posts</a>
 					</li>
 					<li>
-						<a href="/blog/category/site-update" class="hover:underline">Site Updates</a>
+						<a href="/posts/category/site-update" class="hover:underline">Site Updates</a>
 					</li>
 					<li>
 						<a href="/rss.xml" class="hover:underline">RSS</a>

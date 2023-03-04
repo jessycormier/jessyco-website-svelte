@@ -4,17 +4,20 @@ import { redirectWhenNoPages } from '$lib/functions/redirect-when-no-pages.funct
 import type { PageServerLoad } from './$types';
 
 export const load = (async ({ url, params, fetch }) => {
-	const pageNumber = parseInt(params.page) || 1;
-	redirectWhenNoPages(pageNumber, '/blog');
-	const offset = pageNumber * postsPerPage - postsPerPage;
+	const { category, page } = params;
+	const pageNumber = parseInt(page) || 1;
 
+	redirectWhenNoPages(pageNumber, `/posts/category/${category}`);
+
+	const offset = pageNumber * postsPerPage - postsPerPage;
 	const totalPostsRes = await fetch(`${url.origin}/api/posts/count`);
 	const total = await totalPostsRes.json();
-	const { posts: postsMeta } = await fetchPostsMeta({ offset });
+	const { posts: postsMetas } = await fetchPostsMeta({ offset });
 
 	return {
-		posts: postsMeta,
+		posts: postsMetas,
 		page: pageNumber,
+		category,
 		totalPosts: total
 	};
 }) satisfies PageServerLoad;

@@ -42,7 +42,7 @@
 		<h2 class="text-4xl mb-16">Recent Posts</h2>
 		<PostsList posts={data.posts} />
 		<p class="text-center pt-12">
-			<a href="/blog">See More</a>
+			<a href="/posts">See More Posts</a>
 		</p>
 	</section>
 </Container>

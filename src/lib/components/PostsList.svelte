@@ -26,7 +26,7 @@
 			</div>
 
 			<div class="basis-12 sm:basis-32 flex items-center">
-				<a href="/blog/{post.slug}">
+				<a href="/posts/{post.slug}">
 					<ImageHover showDetails={false}>
 						<img
 							src="/polybg/400x400/{slugify(post.title)}.svg"
@@ -38,7 +38,7 @@
 
 			<div class="flex flex-1 flex-col justify-between">
 				<div class="border-l border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6">
-					<a href="/blog/{post.slug}">
+					<a href="/posts/{post.slug}">
 						<h3 class="font-bold uppercase text-gray-900 dark:text-white">
 							{post.title}
 						</h3>

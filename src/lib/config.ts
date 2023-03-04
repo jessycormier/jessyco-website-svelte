@@ -14,9 +14,9 @@ export const navItems: {
 	ariaDetail?: string;
 }[] = [
 	{
-		title: 'Blog Posts',
-		route: '/blog',
-		ariaDetail: 'My blog posts'
+		title: 'Posts',
+		route: '/posts',
+		ariaDetail: 'My posts'
 	},
 	{
 		title: 'RSS',

@@ -30,9 +30,9 @@ ${posts.map(postTemplate).join('')}
 `;
 
 	const postTemplate = (post: PostMeta) => `<item>
-<guid isPermaLink="true">${siteLink}/blog/${post.slug}</guid>
+<guid isPermaLink="true">${siteLink}/posts/${post.slug}</guid>
 <title>${post.title}</title>
-<link>${siteLink}/blog/${post.slug}</link>
+<link>${siteLink}/posts/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`;

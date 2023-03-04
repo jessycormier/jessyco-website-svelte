@@ -11,12 +11,12 @@
 	<div>
 		<h1 class="text-4xl mb-8">All blog categories</h1>
 
-		<a href="/blog/">Back to Blog Posts</a>
+		<a href="/posts/">Back to Blog Posts</a>
 
 		<ul>
 			{#each uniqueCategories as category}
 				<li>
-					<a href="/blog/category/{category.title}">
+					<a href="/posts/category/{category.title}">
 						{category.title}
 					</a>
 					({category.count})
