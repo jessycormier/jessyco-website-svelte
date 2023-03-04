@@ -2,7 +2,7 @@
 	import type { PostMeta } from '$lib/interfaces/post-meta.interface';
 	import { slugify } from '$lib/functions/slugify.function';
 	import dayjs from 'dayjs';
-	import { cubicOut } from 'svelte/easing';
+	import { cubicIn } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import ImageHover from './ImageHover.svelte';
 	import Tag from './Tag.svelte';
@@ -13,15 +13,18 @@
 <div class="flex flex-col gap-12">
 	{#each posts as post, index}
 		<article
-			class="flex bg-white transition hover:shadow-xl dark:bg-gray-800 dark:shadow-gray-800/25 rounded"
-			in:fade={{ duration: 1200, easing: cubicOut, delay: index * 100 }}>
+			class="flex bg-white transition hover:shadow-xl dark:bg-gray-800 dark:shadow-gray-700/25 rounded"
+			in:fade={{ duration: 512, easing: cubicIn, delay: index * 128 }}>
 			<div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
 				<time
 					datetime={post.date}
-					class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 dark:text-white">
+					class="flex items-center justify-between gap-4 text-xs font-bold  text-gray-900 dark:text-white">
 					<span>{dayjs(post.date).format('YYYY')}</span>
 					<span class="w-px flex-1 bg-gray-900/10 dark:bg-white/10" />
-					<span>{dayjs(post.date).format('MMM DD')}</span>
+					<span>
+						<span class="text-blue-500">{dayjs(post.date).format('MMM')}</span>
+						<span class="text-blue-200">{dayjs(post.date).format('DD')}</span>
+					</span>
 				</time>
 			</div>
 
@@ -31,7 +34,7 @@
 						<img
 							src="/polybg/400x400/{slugify(post.title)}.svg"
 							alt="{post.title}"
-							class="h-32 object-cover w-full aspect-square motion-safe:group-hover:scale-110 transition duration-300 ease-in-out" />
+							class="h-32 object-cover w-full aspect-square motion-safe:group-hover:scale-125 transition duration-300 ease-in-out" />
 					</ImageHover>
 				</a>
 			</div>
