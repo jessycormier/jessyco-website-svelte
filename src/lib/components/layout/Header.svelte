@@ -14,11 +14,9 @@
 					{page.title}
 				</NavItem>
 			{/each}
-			<!-- 
-				TEMP DISABLE, Click issue in svelte
-				<li>
+			<li>
 				<DarkModeToggle />
-			</li> -->
+			</li>
 		</ul>
 	</nav>
 </div>

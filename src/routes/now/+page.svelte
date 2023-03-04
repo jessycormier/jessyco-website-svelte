@@ -23,8 +23,8 @@
 		</h1>
 		<ul>
 			<li>Updating this site of course!</li>
-			<li><span class="line-through">Playing Moonlighter, I'm determand to finally say I beat the game. </span> Beat the game!</li>
-			<li>Playing Dwarf Fortress, what a game I know nothing but it's still holding my interest. I'm sorry Dwarfs I've had to sacrafice for the advancement of knowledge...</li>
+			<li><span class="line-through">Playing Moonlighter, I'm determined to finally say I beat the game. </span> Beat the game!</li>
+			<li>Playing Dwarf Fortress, what a game I know nothing but it's still holding my interest. I'm sorry Dwarfs I've had to sacrifice for the advancement of knowledge...</li>
 			<li>Still need to beat the new boss in Valheim.</li>
 			<li>
 				<span class="line-through">

@@ -18,8 +18,8 @@
 
 	export let data: PageData;
 
-	const animationDurationBase = 250;
-	const transitionIn = { delay: 150, duration: animationDurationBase };
+	const animationDurationBase = 450;
+	const transitionIn = { delay: 250, duration: animationDurationBase };
 	const transitionOut = { duration: animationDurationBase / 2.5 };
 
 	$: currentPage.set(data.path);
@@ -35,16 +35,6 @@
 	const twitterImg = `${siteLink}/polybg/800x418/${slugify($page?.data?.post?.title||'bg')}.png`;
 	const description = $page?.data?.meta?.description || siteDefaultDescription;
 </script>
-
-<!-- <div class="border border-red-600 p-2 m-6">
-	{pageTitle}
-	<hr class="my-2">
-	{JSON.stringify($page)}
-	<hr class="my-2">
-	{JSON.stringify($page.data)}
-	<hr class="my-2">
-	{JSON.stringify($page.data.post)}
-</div> -->
 
 <svelte:head>
 	<title>{title}</title>

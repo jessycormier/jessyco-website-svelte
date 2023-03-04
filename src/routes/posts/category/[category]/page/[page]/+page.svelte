@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Pagination from '$lib/components/Pagination.svelte';
 	import PostsList from '$lib/components/PostsList.svelte';
 	import { postsPerPage } from '$lib/config';
 	import type { PageData } from './$types';
@@ -18,15 +17,11 @@
 		<br />
 		<small>Posts {lowerBound}–{upperBound} of {totalPosts}</small>
 	</h1>
-	<Pagination currentPage={page} {totalPosts} path="/blog/category/{category}/page" />
-
 	<PostsList {posts} />
-
-	<Pagination currentPage={page} {totalPosts} path="/blog/category/{category}/page" />
 {:else}
 	<h1>Oops!</h1>
 
 	<p>Sorry, no posts to show here.</p>
 
-	<a href="/blog">Back to blog</a>
+	<a href="/posts">Back to posts</a>
 {/if}

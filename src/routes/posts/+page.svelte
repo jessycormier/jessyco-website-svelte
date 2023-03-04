@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
-	import Pagination from '$lib/components/Pagination.svelte';
 	import PostsList from '$lib/components/PostsList.svelte';
 	import type { PageData } from './$types';
 
@@ -11,6 +10,4 @@
 	<h1 class="text-4xl mb-12">Blog Posts</h1>
 
 	<PostsList posts={data.posts} />
-
-	<Pagination currentPage={1} totalPosts={data.total} />
 </Container>
