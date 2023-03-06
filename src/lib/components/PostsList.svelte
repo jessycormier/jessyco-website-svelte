@@ -22,8 +22,8 @@
 					<span>{dayjs(post.date).format('YYYY')}</span>
 					<span class="w-px flex-1 bg-gray-900/10 dark:bg-white/10" />
 					<span>
-						<span class="text-blue-500">{dayjs(post.date).format('MMM')}</span>
-						<span class="text-blue-200">{dayjs(post.date).format('DD')}</span>
+						<span class="">{dayjs(post.date).format('MMM')}</span>
+						<span class="">{dayjs(post.date).format('DD')}</span>
 					</span>
 				</time>
 			</div>

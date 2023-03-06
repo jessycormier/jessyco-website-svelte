@@ -10,14 +10,14 @@
 
 	main a {
 		@apply transition-colors;
-		@apply text-blue-500 font-bold;
-		@apply hover:text-blue-700;
+		@apply text-blue-600 font-bold;
+		@apply hover:text-blue-800;
 
-		@apply dark:text-blue-400;
-		@apply hover:dark:text-yellow-200;
+		@apply dark:text-blue-500;
+		@apply hover:dark:text-yellow-300;
 
 		&.active {
-			@apply dark:text-gray-500 text-white;
+			@apply dark:text-gray-600 text-white;
 		}
 	}
 }

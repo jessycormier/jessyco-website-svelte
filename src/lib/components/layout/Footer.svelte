@@ -11,20 +11,20 @@
 				<LogoTitle cssClasses="text-2xl" />
 			</div>
 			<div class="pl-1 text-xs">
-				<span class="tex text-gray-500 dark:text-gray-400 font-mono">
+				<span class="text-gray-700 dark:text-gray-600 font-mono">
 					&copy;{new Date().getFullYear()}
 					{siteAuthor}
 					<br />
 					Built with ☕,
 					<a href="https://kit.svelte.dev">
-						Svelte<span class="opacity-60">Kit</span>
+						SvelteKit
 					</a>
 					and <a href="https://tailwindcss.com"> tailwindcss </a>
 				</span>
 			</div>
 			<div class="pl-1 text-xs pt-2 flex mt-4 space-x-2 sm:justify-left sm:mt-0">
 				{#each socialLinks as { href, sr, icon }}
-					<a {href} class="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer p-1">
+					<a {href} class="text-gray-700 hover:text-gray-900 dark:hover:text-white cursor-pointer p-1">
 						<svelte:component this={icon} />
 						<span class="sr-only">{sr}</span>
 					</a>
@@ -34,7 +34,7 @@
 		<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
 			<div>
 				<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Navigation</h2>
-				<ul class="text-gray-600 dark:text-gray-400">
+				<ul class="text-gray-700 dark:text-gray-600">
 					<li>
 						<a href="/posts" class="hover:underline ">Posts</a>
 					</li>
@@ -48,7 +48,7 @@
 			</div>
 			<div>
 				<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">The Happenings</h2>
-				<ul class="text-gray-600 dark:text-gray-400">
+				<ul class="text-gray-700 dark:text-gray-600">
 					<li>
 						<a href="/now" class="hover:underline">Now</a>
 					</li>
@@ -63,7 +63,7 @@
 
 			<!-- <div>
 				<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-				<ul class="text-gray-600 dark:text-gray-400">
+				<ul class="text-gray-700 dark:text-gray-600">
 					<li class="mb-4">
 						<a href="#" class="hover:underline">Privacy Policy</a>
 					</li>

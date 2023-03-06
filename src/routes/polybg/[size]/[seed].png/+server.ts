@@ -15,7 +15,7 @@ export const GET = (({ params }) => {
 
 		return new Response(pattern, {
 			headers: {
-				'Cache-Control': `public, max-age=2629000, s-max-age=2629000`,
+				'Cache-Control': `public, max-age=2629000`,
 				'Content-Type': 'image/png'
 			}
 		});

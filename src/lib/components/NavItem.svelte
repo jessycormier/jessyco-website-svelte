@@ -13,7 +13,6 @@
 	<a
 		class="p-2 my-3"
 		{href}
-		aria-details="{ariaDetail}"
 		aria-label="{ariaDetail}"
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}
