@@ -6,7 +6,7 @@ categories:
   - vs-code
 ---
 
-I've found value in finding these kinds of posts by other people online so I thought I would share my setup to maybe benifit you.
+I've found value in finding these kinds of posts by other people online so I thought I would share my setup to maybe benefit you.
 
 ### User Settings
 

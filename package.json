@@ -43,7 +43,9 @@
   },
   "dependencies": {
     "@vercel/analytics": "^0.1.11",
+    "chart.js": "^4.2.1",
     "dayjs": "^1.11.7",
+    "svelte-chartjs": "^3.1.2",
     "trianglify": "^4.1.1"
   }
 }
