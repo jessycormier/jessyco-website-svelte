@@ -10,8 +10,8 @@ categories:
 
 ### The Technical 
 
-I've been digging into why the social media links are not rendering out correclty.
-I noticed sharing links on social media has varaying results. 
+I've been digging into why the social media links are not rendering out correctly.
+I noticed sharing links on social media has varying results. 
 First I decided to compare the meta tags I grabbed from somewhere online to GitHubs;
 
 Starting with what I originally had
@@ -81,7 +81,7 @@ Why? Simply I can't handle having url encoding appear in my URLs if I can handle
 
 ### The Future
 
-I have some ideas I'd like to explore with this site so please stay toon.
+I have some ideas I'd like to explore with this site so please stay tuned.
 I've had a lot of small project ideas sitting for years now but feel it's time to start giving light to some of them, as well as showcase things I've pushed out there live, share code and experiences along the path.
 This is a kind of learning in the public if you will where it's raw but here to help. I hope to also improve my writing skills along the way; so here's to that effort! 
 

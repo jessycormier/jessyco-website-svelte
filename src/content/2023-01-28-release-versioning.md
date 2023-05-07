@@ -23,25 +23,25 @@ The project I have at work had no versioning attached to it in git repository, s
 I could cross reference the information there and the repo but that takes time and energy to gain that context.
 
 The simple solution for me was to add in a `changelog.md` as well as begin tagging the releases going forward. 
-This project has no official version to it and previous developers refernece the year as the new update. 
+This project has no official version to it and previous developers reference the year as the new update. 
 It's a very marketing forward type of project so this language makes sense. 
-The best fit I could tink of was to use something like `YYYY-MM` so this is what I did. 
+The best fit I could think of was to use something like `YYYY-MM` so this is what I did. 
 I went back into the history of hte project a little bit and tagged a few previous releases like `release-2020-01`. 
 
 Eventually I learned about a versioning system called [CalVer].
 They have a great write up on many different ways to use their system to convey information in this kind of context I work with. 
 This had me thinking of my previous work and how we released. 
-I was working in an enterprise envirnment that, when releasing we had to release many projects at the same time across many area's of the platform we built.
+I was working in an enterprise environment that, when releasing we had to release many projects at the same time across many area's of the platform we built.
 The challenge we faced often was that we where trying to use [semantic versioning] but not all our developers had practice and experience in this across the few teams and projects. 
-We had over 70 seperate projects that may or may not include versioning with developers that hadn't been trained on how to identify Major, Minor vs patch type changes. 
+We had over 70 separate projects that may or may not include versioning with developers that hadn't been trained on how to identify Major, Minor vs patch type changes. 
 
 SO, this means when it came time to release we kind of talked about a release number basing it off of the client side code and back-end versions of the api's and code bases didn't really matter. We ran into issues again and again with versioning where if a back-end product updated because of a bug then we scramble to tag the front-end repo and things just get messy this way.
 
-For you guys if you're still out there and happen to stumble upon this article, I highly recomend taking the time to create a seperation of concerns for releasing vs project versioning. I think using the [CalVer] solution for release tagging across all of the repo's would better identify over time  than trying to mix and match versions across the projects. 
+For you guys if you're still out there and happen to stumble upon this article, I highly recommend taking the time to create a separation of concerns for releasing vs project versioning. I think using the [CalVer] solution for release tagging across all of the repo's would better identify over time  than trying to mix and match versions across the projects. 
 
-One or the other solution might not be for you depending on your project, but these tools can be used to communication information across many teamns or people. It can be helpful in the future if you have questions about your code like what did we release or fix since our last release.
+One or the other solution might not be for you depending on your project, but these tools can be used to communication information across many teams or people. It can be helpful in the future if you have questions about your code like what did we release or fix since our last release.
 
-For me I'll most likely stick with the use of [semantic versioning] for any library or pushed code however for a product release I like the idea of simpliying it. Maybe make a variation on [CalVer] and ad in a code word for that particular release.
+For me I'll most likely stick with the use of [semantic versioning] for any library or pushed code however for a product release I like the idea of simplifying it. Maybe make a variation on [CalVer] and ad in a code word for that particular release.
 
 ##  Bonus
 
